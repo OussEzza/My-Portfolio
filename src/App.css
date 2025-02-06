@@ -1,3 +1,36 @@
+ul li {
+  position: relative;
+}
+
+ul li a {
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: large;
+}
+
+ul li a:hover {
+  color: #61dafb; /* Change text color on hover */
+  cursor: pointer;
+}
+
+ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* Adjust based on where you want the line */
+  width: 0;
+  height: 2px;
+  background-color: #61dafb; /* Underline color */
+  transition: width 0.3s ease;
+}
+
+ul li a:hover::after {
+  width: 100%; /* Underline expands on hover */
+}
+
+
+
 .App {
   text-align: center;
 }

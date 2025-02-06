@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import NavBar from "./components/NavBar";
+import AboutPage from "./components/AboutPage";
+import ProjectsPage from "./components/ProjectsPage";
+import EducationPage from "./components/EducationPage";
+import ContactPage from "./components/ContactPage";
+import HomePage from "./components/HomePage";
+// import FooterPage from "./components/FooterPage";
+import ActionBar from "./components/ActionBar";
+
+import "./index.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar />
+      <div id="home">
+        <HomePage />
+      </div>
+      <div id="about">
+        <AboutPage />
+      </div>
+      <div id="educations">
+        <EducationPage />
+      </div>
+      <div id="projects">
+        <ProjectsPage />
+      </div>
+      <div id="contact">
+        <ContactPage />
+      </div>
+      <ActionBar />
+      <footer className="py-8 bg-gray-800 text-white text-center">
+        <p>&copy; 2025 Oussama EZZAHRI. All Rights Reserved.</p>
+      </footer>
+      {/* <FooterPage /> */}
+    </>
   );
 }
 
