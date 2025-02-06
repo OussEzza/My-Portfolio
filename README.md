@@ -1,6 +1,3 @@
-Here’s an edited version of the description, tailored for a `README.md` file:
-
-```markdown
 # Portfolio - React, Chakra UI, and Tailwind CSS
 
 This is my personal portfolio built with **React**, **Chakra UI**, and **Tailwind CSS**. It showcases my skills, projects, and experience in web development. The portfolio is designed to be fully responsive with a clean, modern layout. It includes smooth animations and a dark/light mode toggle to enhance user experience.
@@ -19,12 +16,12 @@ To run this project locally:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/your-portfolio.git
+   git clone https://github.com/OussEzza/My-Portfolio.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd your-portfolio
+   cd My-Portfolio
    ```
 
 3. Install dependencies:
@@ -41,7 +38,7 @@ To run this project locally:
 
 ## Deployment
 
-This portfolio is deployed on [Vercel](https://vercel.com/) and is automatically updated whenever changes are pushed to the GitHub repository.
+This portfolio is deployed on [Vercel](https://OussamaEZZAHRI.vercel.app/) and is automatically updated whenever changes are pushed to the GitHub repository.
 
 ## Technologies Used
 
@@ -57,6 +54,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 Feel free to explore my work and reach out if you have any questions or feedback!
-```
-
-This `README.md` includes sections like project features, installation instructions, and deployment details, making it easier for others to understand and use your portfolio. Feel free to update the `yourusername/your-portfolio.git` URL with your actual GitHub repository link!
