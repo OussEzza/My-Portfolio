@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Accordion,
   AccordionItem,
@@ -14,21 +15,54 @@ export default function ProjectsPage() {
       title: "E-Commerce Website",
       description: "The e-commerce website",
       detailed_description:
-        "A responsive e-commerce platform with product filtering, cart, and payment integration.",
-      techStack: ["React.js", "Laravel", "Tailwind CSS"],
-      liveLink: "https://ecommerce-example.com",
-      repoLink: "https://github.com/yourusername/ecommerce",
-      image: ["testProject.png", "testProject.png", "testProject.png"],
+        "An interactive e-commerce web application tailored for gaming enthusiasts. The application provides a seamless shopping experience for gaming products including keyboards, headphones, mice, gaming consoles, and accessories..",
+      techStack: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+      liveLink: null,
+      repoLink: "https://github.com/OussEzza/e-commerce-web-application",
+      image: [
+        "GamingPlanet/GamingPlanet1.png",
+        "GamingPlanet/GamingPlanet2.png",
+        "GamingPlanet/GamingPlanet3.png",
+        "GamingPlanet/GamingPlanet4.png",
+        "GamingPlanet/GamingPlanet5.png",
+        "GamingPlanet/GamingPlanet6.png",
+      ],
     },
+    // {
+    //   title: "Portfolio Website",
+    //   description: "My personal portfolio website",
+    //   detailed_description:
+    //     "A personal portfolio showcasing my skills, experiences and projects, built with modern technologies.",
+    //   techStack: ["React.js", "Tailwind CSS"],
+    //   liveLink: "https://your-portfolio.com",
+    //   repoLink: "https://oussamaezzahri.vercel.app/",
+    //   image: ["Portfolio/Portfolio1.png",
+    //     "Portfolio/Portfolio2.png",
+    //     "Portfolio/Portfolio3.png",
+    //   ],
+    // },
     {
-      title: "Portfolio Website",
-      description: "My personal portfolio website",
+      title: "Student Absence Management System",
+      description: "A facial recognition-based attendance management system.",
       detailed_description:
-        "A personal portfolio showcasing my projects and skills, built with modern technologies.",
-      techStack: ["Vue.js", "Tailwind CSS"],
-      liveLink: "https://your-portfolio.com",
-      repoLink: "https://github.com/yourusername/portfolio",
-      image: ["testProject.png", "logo512.png", "testProject.png"],
+        "An intelligent system that automates student attendance tracking using facial recognition. It captures student faces, verifies identities, and marks attendance in real time. The system enhances efficiency, prevents proxy attendance, and integrates with a database for record management.",
+      techStack: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "PHP",
+        "MySQL",
+        "Python",
+        "OpenCV",
+        "Dlib",
+      ],
+      liveLink: null,
+      repoLink: "https://github.com/OussEzza/Management_of_student_absences_using_facial_recognition",
+      image: [
+        "Presence/Presence2.png",
+        "Presence/Presence3.png",
+        "Presence/Presence1.png",
+      ],
     },
     {
       title: "Training Management System",
@@ -40,10 +74,10 @@ export default function ProjectsPage() {
       liveLink: null,
       repoLink: "https://github.com/OussEzza/training-management-frontend",
       image: [
-        "Training1.png",
-        "Training2.png",
-        "Training3.png",
-        "Training4.png",
+        "Training/Training1.png",
+        "Training/Training2.png",
+        "Training/Training3.png",
+        "Training/Training4.png",
       ],
     },
   ];
@@ -87,15 +121,30 @@ function ProjectCard({ project }) {
     );
   };
 
+  // Auto-slide every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(nextImage, 3000);
+
+    return () => clearInterval(interval);
+  }, [currentImageIndex]);
+
   return (
     <div className="rounded-lg shadow-xl mt-10 overflow-hidden">
       {/* Image Slider */}
-      <div className="relative">
-        <img
-          src={project.image[currentImageIndex]}
-          alt={`${project.title} Screenshot`}
-          className="object-cover"
-        />
+      <div className="relative overflow-hidden w-full max-w-4xl mx-auto h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] max-h-[300px] md:max-h-none">
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={currentImageIndex}
+            src={project.image[currentImageIndex]}
+            alt={`${project.title} Screenshot`}
+            className="absolute w-full h-full object-contain sm:object-cover"
+            initial={{ x: "100%", opacity: 0 }}
+            animate={{ x: "0%", opacity: 1 }}
+            exit={{ x: "-100%", opacity: 0 }}
+            transition={{ duration: 0.7, ease: "easeInOut" }}
+          />
+        </AnimatePresence>
+
         {/* Previous Button */}
         <button
           onClick={prevImage}
@@ -140,7 +189,7 @@ function ProjectCard({ project }) {
           ))}
         </div>
         <div className="flex gap-4">
-          {project.liveLink !== null ? (
+          {/* {project.liveLink !== null ? (
             <a
               href={project.liveLink}
               target="_blank"
@@ -159,7 +208,7 @@ function ProjectCard({ project }) {
             >
               No Live Demo
             </a>
-          )}
+          )} */}
 
           <a
             href={project.repoLink}
