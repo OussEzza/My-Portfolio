@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState } from "react";
+// import { motion, AnimatePresence } from "framer-motion";
 import {
   Accordion,
   AccordionItem,
@@ -57,7 +57,8 @@ export default function ProjectsPage() {
         "Dlib",
       ],
       liveLink: null,
-      repoLink: "https://github.com/OussEzza/Management_of_student_absences_using_facial_recognition",
+      repoLink:
+        "https://github.com/OussEzza/Management_of_student_absences_using_facial_recognition",
       image: [
         "Presence/Presence2.png",
         "Presence/Presence3.png",
@@ -122,29 +123,21 @@ function ProjectCard({ project }) {
   };
 
   // Auto-slide every 3 seconds
-  useEffect(() => {
-    const interval = setInterval(nextImage, 3000);
+  // useEffect(() => {
+  //   const interval = setInterval(nextImage, 3000);
 
-    return () => clearInterval(interval);
-  }, [currentImageIndex]);
+  //   return () => clearInterval(interval);
+  // }, [currentImageIndex]);
 
   return (
     <div className="rounded-lg shadow-xl mt-10 overflow-hidden">
       {/* Image Slider */}
-      <div className="relative overflow-hidden w-full max-w-4xl mx-auto h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] max-h-[300px] md:max-h-none">
-        <AnimatePresence mode="wait">
-          <motion.img
-            key={currentImageIndex}
-            src={project.image[currentImageIndex]}
-            alt={`${project.title} Screenshot`}
-            className="absolute w-full h-full object-contain sm:object-cover"
-            initial={{ x: "100%", opacity: 0 }}
-            animate={{ x: "0%", opacity: 1 }}
-            exit={{ x: "-100%", opacity: 0 }}
-            transition={{ duration: 0.7, ease: "easeInOut" }}
-          />
-        </AnimatePresence>
-
+      <div className="relative">
+        <img
+          src={project.image[currentImageIndex]}
+          alt={`${project.title} Screenshot`}
+          className="object-cover"
+        />
         {/* Previous Button */}
         <button
           onClick={prevImage}
