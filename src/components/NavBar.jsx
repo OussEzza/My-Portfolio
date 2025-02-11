@@ -43,7 +43,7 @@ export default function NavBar() {
           <div className="flex items-center gap-4">
             {/* CV Button (Hidden on Mobile) */}
             <a
-              className="px-6 py-3 rounded-3xl bg-blue-500 text-2xl md:text-lg text-white hover:bg-blue-600 transition-all hidden md:inline"
+              className="px-6 py-3 rounded-3xl bg-blue-500 text-2xl md:text-lg text-white hover:bg-blue-600 transition-all hidden xl:inline"
               href="EZZAHRI-Oussama-cv.pdf"
               download
             >
@@ -69,11 +69,11 @@ export default function NavBar() {
 
         {/* Mobile Menu (Animated) */}
         <div
-          className={`md:hidden transition-all duration-300 ease-in-out ${
+          className={`md:hidden transition-all duration-300 shadow-lg ease-in-out ${
             isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
           } overflow-hidden`}
         >
-          <ul className="flex flex-col items-center gap-3 text-lg py-4 shadow-md rounded-lg">
+          <ul className="flex flex-col items-center gap-3 text-lg pb-2 pt-4 rounded-lg shadow-md">
             {["home", "about", "educations", "projects", "contact"].map(
               (section) => (
                 <li key={section}>

@@ -35,7 +35,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center md:px-40 py-16">
+    <div className="flex flex-col items-center justify-center md:px-8 2xl:px-40 py-16">
       <h1 className="text-5xl font-extrabold text-center mb-1">ABOUT ME</h1>
       <div className="w-20 h-2 bg-sky-500 mb-6"></div>
       <p className="text-lg md:text-xl w-1/2 text-center leading-relaxed">
@@ -43,10 +43,10 @@ export default function AboutPage() {
         skills mostly in terms of programming and technology
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 p-8 rounded-lg dark:bg-gray-900">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 p-8 rounded-lg">
         {/* Left Column */}
         <div className="flex flex-col items-center p-4 md:p-8">
-          <h2 className="text-3xl font-bold text-center md:text-left mb-4 dark:text-gray-200">
+          <h2 className="text-3xl font-bold text-center md:text-left mb-4">
             Get to know me!
           </h2>
           <div className="justify-start items-center md:items-start py-8">
@@ -88,14 +88,13 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold text-center mb-6">
             Skills and Tools i use
           </h2>
-          <SimpleGrid columns={{ base: 2, md: 4 }} spacing={6}>
+          <SimpleGrid columns={{ base: 2, xl: 3, "2xl":4 }} spacing={6}>
             {skills.map((skill, index) => (
               <Box
                 key={index}
                 bg="white"
                 _dark={{ bg: "gray.800", color: "white" }}
                 p="4"
-                // w="160px"
                 boxShadow="md"
                 borderRadius="md"
                 textAlign="center"

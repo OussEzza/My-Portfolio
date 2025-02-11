@@ -29,6 +29,11 @@ ul li a:hover::after {
   width: 100%; /* Underline expands on hover */
 }
 
+/* Mobile menu animation */
+.transition-all {
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
 
 
 .App {
