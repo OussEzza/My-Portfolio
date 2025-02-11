@@ -93,7 +93,7 @@ export default function ProjectsPage() {
           created with each project containing its own case study
         </p>
       </div>
-      <div className="flex flex-col justify-center px-4 2xl:px-40 py-16">
+      <div className="flex flex-col justify-center px-4 2xl:px-30 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-6">
           {projects.map((project, projectIndex) => (
             <ProjectCard key={projectIndex} project={project} />

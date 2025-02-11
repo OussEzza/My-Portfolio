@@ -12,24 +12,26 @@ export default function ContactPage() {
   const onSubmit = handleSubmit((data) => console.log(data));
 
   return (
-    <div className="flex flex-col items-center justify-center px-6 md:px-40 py-16">
-      <h1 className="text-5xl font-extrabold text-center mb-1">CONTACT ME</h1>
-      <div className="w-20 h-2 bg-sky-500 mb-6"></div>
-      <p className="text-lg md:text-xl w-1/2 text-center leading-relaxed">
+    <div className="flex flex-col items-center justify-center px-4 sm:px-8 md:px-16 lg:px-32 xl:px-30 py-12 md:py-16">
+      <h1 className="text-4xl sm:text-5xl font-extrabold text-center mb-2">
+        CONTACT ME
+      </h1>
+      <div className="w-16 sm:w-20 h-2 bg-sky-500 mb-6"></div>
+      <p className="text-md sm:text-lg md:text-xl w-full sm:w-3/4 md:w-1/2 text-center leading-relaxed">
         Feel free to contact me by submitting the form below or a direct message
-        in my mail and I will get back to you as soon as possible
+        in my mail and I will get back to you as soon as possible.
       </p>
 
-      <div className="grid grid-cols-1 mt-4 md:grid-cols-2 gap-12 p-8 rounded-lg">
-        {/* Left Column */}
-        <div className="flex flex-col items-center md:items-start p-4 md:p-8 shadow-lg">
-          <h2 className="text-3xl font-bold text-center md:text-left mb-4 text-blue-400">
-            Send a message !
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 md:gap-12 p-6 md:p-8 rounded-lg w-full max-w-full mt-6">
+        {/* Left Column - Contact Form */}
+        <div className="flex flex-col items-center md:items-start p-4 md:p-8 shadow-lg w-full">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center md:text-left mb-4 text-blue-400">
+            Send a Message!
           </h2>
-          <form onSubmit={onSubmit}>
-            <Stack gap="4" align="flex-center" maxWidth={""} className="md:w-96">
+          <form onSubmit={onSubmit} className="w-full">
+            <Stack gap="4" align="flex-center" className="w-full md:w-full">
               <Field
-                label="Full name"
+                label="Full Name"
                 invalid={!!errors.fullname}
                 errorText={errors.fullname?.message}
               >
@@ -40,6 +42,7 @@ export default function ContactPage() {
                   })}
                 />
               </Field>
+
               <Field
                 label="Email"
                 invalid={!!errors.email}
@@ -52,6 +55,7 @@ export default function ContactPage() {
                   })}
                 />
               </Field>
+
               <Field
                 label="Message"
                 invalid={!!errors.message}
@@ -64,19 +68,21 @@ export default function ContactPage() {
                   })}
                 />
               </Field>
+
               <Button colorScheme="blue" size="md" type="submit">
                 Submit
               </Button>
             </Stack>
           </form>
         </div>
-        {/* Right Column */}
-        <div className="flex flex-col items-start justify-center p-6 rounded-lg shadow-lg">
-          <h2 className="text-3xl font-bold text-center mb-6 text-blue-400">
-            My Informations
+
+        {/* Right Column - Contact Info */}
+        <div className="flex flex-col items-start md:items-start p-6 md:p-8 rounded-lg shadow-lg w-full">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 text-blue-400">
+            My Information
           </h2>
 
-          <div className="text-lg md:text-xl mb-4 space-y-4">
+          <div className="text-md sm:text-lg md:text-xl space-y-4">
             <div>
               <p className="font-semibold text-blue-500">Name:</p>
               <p className="">Oussama EZZAHRI</p>
@@ -94,18 +100,8 @@ export default function ContactPage() {
 
             <div>
               <p className="font-semibold text-blue-500">Location:</p>
-              <p className="">EL Jadida, Morocco</p>
+              <p className="">El Jadida, Morocco</p>
             </div>
-
-            {/* <div>
-              <p className="font-semibold text-blue-500">About Me:</p>
-              <p className="">
-                I am a passionate software developer with a focus on web
-                development, particularly using technologies like React, Vue.js,
-                and Laravel. I'm constantly learning and expanding my skill set
-                to stay up-to-date with the latest trends in the tech world.
-              </p>
-            </div> */}
           </div>
         </div>
       </div>
