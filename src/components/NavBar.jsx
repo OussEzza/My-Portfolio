@@ -28,7 +28,7 @@ export default function NavBar() {
 
           {/* Desktop Links Section */}
           <ul className="hidden md:flex gap-10">
-            {["home", "about", "educations & Experiences", "projects", "contact"].map(
+            {["home", "about", "educations", "projects", "contact"].map(
               (section) => (
                 <li key={section} className="hover:text-gray-500">
                   <Link to={section} smooth={true} duration={100}>
