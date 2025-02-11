@@ -14,9 +14,9 @@ export default function NavBar() {
   };
 
   return (
-    <div className="container mx-auto">
-      <div className="fix" style={{ padding: "1rem" }}>
-        <Flex justify="space-between" align="center">
+    <nav className=" top-0 left-0 w-full">
+      <div className="container max-w-screen-xl mx-auto px-4 md:px-8 py-3">
+          <Flex justify="space-between" align="center">
           {/* Logo Section */}
           <a
             href="/"
@@ -27,43 +27,30 @@ export default function NavBar() {
           </a>
 
           {/* Desktop Links Section */}
-          <ul className="hidden sm:flex gap-10">
-            <li className="hover:text-gray-500">
-              <Link to="home" smooth={true} duration={100}>
-                Home
-              </Link>
-            </li>
-            <li className="hover:text-gray-500">
-              <Link to="about" smooth={true} duration={100}>
-                About
-              </Link>
-            </li>
-            <li className="hover:text-gray-500">
-              <Link to="educations" smooth={true} duration={100}>
-                Educations & Experience
-              </Link>
-            </li>
-            <li className="hover:text-gray-500">
-              <Link to="projects" smooth={true} duration={100}>
-                Projects
-              </Link>
-            </li>
-            <li className="hover:text-gray-500">
-              <Link to="contact" smooth={true} duration={100}>
-                Contact
-              </Link>
-            </li>
+          <ul className="hidden md:flex gap-10">
+            {["home", "about", "educations & Experiences", "projects", "contact"].map(
+              (section) => (
+                <li key={section} className="hover:text-gray-500">
+                  <Link to={section} smooth={true} duration={100}>
+                    {section.charAt(0).toUpperCase() + section.slice(1)}
+                  </Link>
+                </li>
+              )
+            )}
           </ul>
 
-          {/* Dark Mode Toggle and Hamburger Button */}
+          {/* Right Section: CV, Dark Mode, Menu */}
           <div className="flex items-center gap-4">
+            {/* CV Button (Hidden on Mobile) */}
             <a
-              className="px-6 py-3 rounded-3xl bg-blue-500 text-2xl md:text-lg text-white hover:bg-blue-600 transition-all hidden sm:inline"
+              className="px-6 py-3 rounded-3xl bg-blue-500 text-2xl md:text-lg text-white hover:bg-blue-600 transition-all hidden md:inline"
               href="EZZAHRI-Oussama-cv.pdf"
               download
             >
-              <i class="fa-solid fa-download"></i> Download CV
+              <i className="fa-solid fa-download"></i> Download CV
             </a>
+
+            {/* Dark Mode Toggle */}
             <IconButton
               aria-label="Toggle Dark Mode"
               icon={colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
@@ -72,70 +59,38 @@ export default function NavBar() {
               color={colorMode === "dark" ? "yellow.400" : "gray.800"}
               _hover={{ bg: colorMode === "dark" ? "gray.700" : "gray.300" }}
             />
-            <button className="sm:hidden text-2xl" onClick={handleMenuToggle}>
+
+            {/* Mobile Menu Button */}
+            <button className="md:hidden text-2xl" onClick={handleMenuToggle}>
               {isMenuOpen ? <FaTimes /> : <FaBars />}
             </button>
           </div>
         </Flex>
 
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="sm:hidden flex flex-col items-center gap-4 pt-4 rounded-lg shadow-md">
-            <ul className="">
-              <li className="hover:text-gray-500">
-                <Link
-                  to="home"
-                  smooth={true}
-                  duration={100}
-                  onClick={handleMenuToggle}
-                >
-                  Home
-                </Link>
-              </li>
-              <li className="hover:text-gray-500">
-                <Link
-                  to="about"
-                  smooth={true}
-                  duration={100}
-                  onClick={handleMenuToggle}
-                >
-                  About
-                </Link>
-              </li>
-              <li className="hover:text-gray-500">
-                <Link
-                  to="educations"
-                  smooth={true}
-                  duration={100}
-                  onClick={handleMenuToggle}
-                >
-                  Educations & Experience
-                </Link>
-              </li>
-              <li className="hover:text-gray-500">
-                <Link
-                  to="projects"
-                  smooth={true}
-                  duration={100}
-                  onClick={handleMenuToggle}
-                >
-                  Projects
-                </Link>
-              </li>
-              <li className="hover:text-gray-500">
-                <Link
-                  to="contact"
-                  smooth={true}
-                  duration={100}
-                  onClick={handleMenuToggle}
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-        )}
+        {/* Mobile Menu (Animated) */}
+        <div
+          className={`md:hidden transition-all duration-300 ease-in-out ${
+            isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+          } overflow-hidden`}
+        >
+          <ul className="flex flex-col items-center gap-3 text-lg py-4 shadow-md rounded-lg">
+            {["home", "about", "educations", "projects", "contact"].map(
+              (section) => (
+                <li key={section}>
+                  <Link
+                    to={section}
+                    smooth={true}
+                    duration={100}
+                    onClick={handleMenuToggle}
+                  >
+                    {section.charAt(0).toUpperCase() + section.slice(1)}
+                  </Link>
+                </li>
+              )
+            )}
+          </ul>
+        </div>
       </div>
-    </div>
+    </nav>
   );
 }
