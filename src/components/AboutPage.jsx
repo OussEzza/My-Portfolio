@@ -69,7 +69,7 @@ export default function AboutPage() {
                 applications. My tech stack includes{" "}
                 <strong>React.js, Laravel, and Tailwind CSS</strong>, and I
                 enjoy creating clean, responsive, and interactive user
-                interfaces using <strong>ShadCN and Chakra UI</strong>. I'm
+                interfaces using <strong>Chakra UI</strong>. I'm
                 always eager to learn new technologies and improve my skills.
               </p>
               <br />
