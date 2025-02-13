@@ -50,7 +50,7 @@ export default function AboutPage() {
             Get to know me!
           </h2>
           <div className="justify-start items-center md:items-start py-8">
-            <p class="text-lg md:text-xl text-justify leading-relaxed">
+            <p class="text-lg md:text-xl p-4 text-justify leading-relaxed">
               <p>
                 👋 Hi, I'm <strong>Oussama EZZAHRI</strong>, a passionate{" "}
                 <strong>Web Developer</strong> and{" "}
