@@ -47,14 +47,14 @@ export default function ProjectsPage() {
       detailed_description:
         "An intelligent system that automates student attendance tracking using facial recognition. It captures student faces, verifies identities, and marks attendance in real time. The system enhances efficiency, prevents proxy attendance, and integrates with a database for record management.",
       techStack: [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "PHP",
-        "MySQL",
         "Python",
         "OpenCV",
         "Dlib",
+        "HTML",
+        "Tailwind CSS",
+        "JavaScript",
+        "PHP",
+        "MySQL",
       ],
       liveLink: null,
       repoLink:
@@ -71,7 +71,7 @@ export default function ProjectsPage() {
         "A comprehensive platform to manage training programs and agents.",
       detailed_description:
         "A responsive training management system that helps administrators manage agents, training programs, and track progress through an intuitive interface.",
-      techStack: ["Laravel", "Vue.js 3", "Bootstrap", "MySQL"],
+      techStack: ["Laravel", "Vue.js", "Bootstrap", "MySQL"],
       liveLink: null,
       repoLink: "https://github.com/OussEzza/training-management-frontend",
       image: [
