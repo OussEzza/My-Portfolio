@@ -50,36 +50,48 @@ export default function AboutPage() {
             Get to know me!
           </h2>
           <div className="justify-start items-center md:items-start py-8">
-            <p class="text-lg md:text-xl text-justify leading-relaxed dark:text-gray-400">
-              I'm a <strong>Software Developer</strong> specializing in{" "}
-              <strong>Web Development</strong>, with expertise in{" "}
-              <strong>React</strong>, <strong>Vue.js</strong>, and{" "}
-              <strong>Laravel</strong>. I focus on building user-friendly,
-              responsive web applications that follow best practices and deliver
-              high-quality solutions.
+            <p class="text-lg md:text-xl text-justify leading-relaxed">
+              <p>
+                👋 Hi, I'm <strong>Oussama EZZAHRI</strong>, a passionate{" "}
+                <strong>Web Developer</strong> and{" "}
+                <strong>Computer Science Student</strong> specializing in{" "}
+                <strong>Full-Stack Development</strong>. Currently, I'm pursuing
+                my{" "}
+                <strong>
+                  Licence Professionnel in Computer Science and Applied
+                  Mathematics
+                </strong>{" "}
+                at <strong>University Chouaib Doukkali</strong>.
+              </p>
               <br />
+              <p>
+                🚀 I love building modern, user-friendly, and scalable web
+                applications. My tech stack includes{" "}
+                <strong>React.js, Laravel, and Tailwind CSS</strong>, and I
+                enjoy creating clean, responsive, and interactive user
+                interfaces using <strong>ShadCN and Chakra UI</strong>. I'm
+                always eager to learn new technologies and improve my skills.
+              </p>
               <br />
-              Currently pursuing a{" "}
-              <strong>Professional Bachelor's Degree</strong> in{" "}
-              <strong>Computer Engineering and Applied Mathematics</strong>, I
-              am refining my skills in both <strong>frontend</strong> and{" "}
-              <strong>backend</strong> development through various academic
-              projects.
+              <p>
+                📌 I’m currently looking for a <strong>PFE internship</strong>{" "}
+                in <strong>web development</strong> to apply my skills in a
+                professional setting and gain hands-on experience. If you’re
+                looking for a dedicated and enthusiastic developer, let’s
+                connect!
+              </p>
               <br />
-              <br />I enjoy sharing my knowledge on{" "}
-              <strong>Web Development</strong> to support others in the{" "}
-              <strong>Dev Community</strong>. Feel free to connect with me on{" "}
-              <strong>
-                <a
-                  className="text-blue-500 hover:text-blue-600 dark:text-blue-400"
-                  href="https://www.linkedin.com/in/oussama-ezzahri/"
-                  targe="_blank"
-                >
-                  LinkedIn
-                </a>
-              </strong>
-              . I'm also open to <strong>job opportunities</strong> where I can
-              contribute and grow. Don't hesitate to reach out!
+              <p>
+                📩 <strong>Feel free to reach out:</strong>
+              </p>
+              <ul>
+                <li>
+                  📧 <strong>Email:</strong> ezzahri.o021@ucd.ac.ma
+                </li>
+                <li>
+                  📍 <strong>Location:</strong> El Jadida, Morocco
+                </li>
+              </ul>
             </p>
           </div>
         </div>
@@ -88,7 +100,7 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold text-center mb-6">
             Skills and Tools i use
           </h2>
-          <SimpleGrid columns={{ base: 2, xl: 3, "2xl":4 }} spacing={6}>
+          <SimpleGrid columns={{ base: 2, xl: 3, "2xl": 4 }} spacing={6}>
             {skills.map((skill, index) => (
               <Box
                 key={index}
