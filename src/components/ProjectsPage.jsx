@@ -89,8 +89,8 @@ export default function ProjectsPage() {
         <h1 className="text-5xl font-extrabold text-center mb-1">PROJECTS</h1>
         <div className="w-20 h-2 bg-sky-500 mb-6"></div>
         <p className="text-lg md:text-xl w-1/2 text-center leading-relaxed">
-          Here you will find some of the personal and clients projects that I
-          created with each project containing its own case study
+          Here you will find some of the personal and school projects that I
+          created.
         </p>
       </div>
       <div className="flex flex-col justify-center px-4 2xl:px-30 py-16">
