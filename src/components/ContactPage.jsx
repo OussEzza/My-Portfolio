@@ -9,7 +9,10 @@ export default function ContactPage() {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = handleSubmit((data) => console.log(data));
+  // Handle form submission manually after validation
+  const onSubmit = handleSubmit(() => {
+    document.getElementById("contact-form").submit(); // Manually submit the form
+  });
 
   return (
     <div className="flex flex-col items-center justify-center px-4 sm:px-8 md:px-16 lg:px-32 xl:px-30 py-12 md:py-16">
@@ -28,7 +31,13 @@ export default function ContactPage() {
           <h2 className="text-2xl sm:text-3xl font-bold text-center md:text-left mb-4 text-blue-400">
             Send a Message!
           </h2>
-          <form onSubmit={onSubmit} className="w-full">
+          <form
+            id="contact-form"
+            onSubmit={onSubmit}
+            className="w-full"
+            action="https://formsubmit.co/ezzahri.o021@ucd.ac.ma"
+            method="POST"
+          >
             <Stack gap="4" align="flex-center" className="w-full md:w-full">
               <Field
                 label="Full Name"
@@ -37,6 +46,7 @@ export default function ContactPage() {
               >
                 <Input
                   placeholder="Enter your full name"
+                  name="fullname"
                   {...register("fullname", {
                     required: "Full name is required",
                   })}
@@ -50,8 +60,15 @@ export default function ContactPage() {
               >
                 <Input
                   placeholder="Enter your email"
+                  type="email"
+                  name="email"
                   {...register("email", {
                     required: "Email is required",
+                    pattern: {
+                      value:
+                        /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+                      message: "Invalid email format",
+                    },
                   })}
                 />
               </Field>
@@ -63,11 +80,18 @@ export default function ContactPage() {
               >
                 <Textarea
                   placeholder="Write your message"
+                  name="message"
+                  rows={5}
                   {...register("message", {
                     required: "Message is required",
                   })}
                 />
               </Field>
+
+              {/* Hidden field to avoid CAPTCHA confirmation */}
+              <input type="hidden" name="_captcha" value="false" />
+
+              <input type="hidden" name="_next" value="https://oussamaezzahri.vercel.app/thank-you" />
 
               <Button colorScheme="blue" size="md" type="submit">
                 Submit
