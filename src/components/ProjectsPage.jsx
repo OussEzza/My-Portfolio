@@ -130,7 +130,7 @@ function ProjectCard({ project }) {
   // }, [currentImageIndex]);
 
   return (
-    <div className="rounded-lg shadow-xl mt-10 overflow-hidden">
+    <div className="rounded-lg shadow-xl overflow-hidden">
       {/* Image Slider */}
       <div className="relative">
         <img
