@@ -28,19 +28,20 @@ export default function ProjectsPage() {
         "GamingPlanet/GamingPlanet6.png",
       ],
     },
-    // {
-    //   title: "Portfolio Website",
-    //   description: "My personal portfolio website",
-    //   detailed_description:
-    //     "A personal portfolio showcasing my skills, experiences and projects, built with modern technologies.",
-    //   techStack: ["React.js", "Tailwind CSS"],
-    //   liveLink: "https://your-portfolio.com",
-    //   repoLink: "https://oussamaezzahri.vercel.app/",
-    //   image: ["Portfolio/Portfolio1.png",
-    //     "Portfolio/Portfolio2.png",
-    //     "Portfolio/Portfolio3.png",
-    //   ],
-    // },
+    {
+      title: "Portfolio Website",
+      description: "My personal portfolio website",
+      detailed_description:
+        "A personal portfolio showcasing my skills, experiences and projects, built with modern technologies.",
+      techStack: ["React.js", "Chakra UI", "Tailwind CSS"],
+      liveLink: "https://oussamaezzahri.vercel.app/",
+      repoLink: "https://github.com/OussEzza/My-Portfolio",
+      image: [
+        "Portfolio/Portfolio1.png",
+        "Portfolio/Portfolio2.png",
+        "Portfolio/Portfolio3.png",
+      ],
+    },
     {
       title: "Student Absence Management System",
       description: "A facial recognition-based attendance management system.",
@@ -130,7 +131,7 @@ function ProjectCard({ project }) {
   // }, [currentImageIndex]);
 
   return (
-    <div className="rounded-lg shadow-xl overflow-hidden">
+    <div className="rounded-lg shadow-xl overflow-hidden w-full md:w-4/5 mx-auto">
       {/* Image Slider */}
       <div className="relative">
         <img
