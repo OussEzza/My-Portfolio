@@ -4,13 +4,13 @@ import { FaCircle } from "react-icons/fa";
 const educationData = [
   {
     date: "In Progress",
-    title: "Professional Bachelor's Degree in Computer Engineering and Applied Mathematics",
-    institution: "Faculty of Multidisciplinary Studies, El Jadida",
+    title: "Professional Bachelor's Degree in Computer Science and Applied Mathematics",
+    institution: "Polydisciplinary Faculty, El Jadida",
   },
   {
     date: "2022 - 2024",
     title: "University Diploma in Computer Engineering (DUT)",
-    institution: "Higher School of Technology",
+    institution: "Higher School of Technology, Sidi Bennour",
   },
   {
     date: "2022",
