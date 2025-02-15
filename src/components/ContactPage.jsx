@@ -35,10 +35,15 @@ export default function ContactPage() {
             id="contact-form"
             onSubmit={onSubmit}
             className="w-full"
-            action="https://formsubmit.co/ezzahri.o021@ucd.ac.ma"
+            action="https://api.web3forms.com/submit"
             method="POST"
           >
             <Stack gap="4" align="flex-center" className="w-full md:w-full">
+              <input
+                type="hidden"
+                name="access_key"
+                value="be8290ec-d984-483d-b913-552fd0d3f2fc"
+              />
               <Field
                 label="Full Name"
                 invalid={!!errors.fullname}
@@ -89,10 +94,14 @@ export default function ContactPage() {
               </Field>
 
               {/* Hidden field to avoid CAPTCHA confirmation */}
-              <input type="hidden" name="_captcha" value="false" />
+              {/* <input type="hidden" name="_captcha" value="false" /> */}
 
-              <input type="hidden" name="_next" value="https://oussamaezzahri.vercel.app/thank-you" />
-
+              {/* <input type="hidden" name="_next" value="https://oussamaezzahri.vercel.app/thank-you" /> */}
+              <input
+                type="hidden"
+                name="redirect"
+                value="https://web3forms.com/success"
+              />
               <Button colorScheme="blue" size="md" type="submit">
                 Submit
               </Button>
