@@ -12,7 +12,7 @@ export default function HomePage() {
         className="w-40 h-40 rounded-full mb-4 border-4 border-blue-500 shadow-2xl"
       />
 
-      <h1 className="text-5xl md:text-7xl font-extrabold mb-4">
+      <h1 className="text-5xl md:text-5xl font-extrabold mb-4">
         Hi, I'm Oussama
       </h1>
 
@@ -35,7 +35,7 @@ export default function HomePage() {
         I specialize in building modern web applications with React and Laravel.
       </p>
 
-      <div className="mt-6">
+      <div className="my-6">
         <Link to="projects" smooth={true} duration={100}>
           <button className="m-3 px-6 py-3 rounded-3xl bg-blue-500 text-white hover:bg-blue-600 transition-all">
             View My Work
