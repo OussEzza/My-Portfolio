@@ -11,7 +11,7 @@ export default function ActionBar() {
   return (
     <Box
       position="fixed"
-      bottom="10"
+      bottom="6"
       left="50%"
       transform="translateX(-50%)"
       p={4}
@@ -30,10 +30,10 @@ export default function ActionBar() {
         {/* Home Link */}
         <a
           href="/#"
-          className="hover:text-blue-500 transition-transform transform hover:scale-125"
+          className="hover:text-blue-500 transition-transform transform hover:scale-150"
         >
           <FaHome
-            size={28}
+            size={20}
             className={
               isDark
                 ? "text-white hover:text-blue-500"
@@ -42,17 +42,17 @@ export default function ActionBar() {
           />
         </a>
 
-        <div className="h-10 w-1 bg-gray-600 m-0 p-0"></div>
+        <div className="h-8 w-1 bg-gray-600 m-0 p-0"></div>
 
         {/* GitHub Link */}
         <a
           href="https://github.com/OussEzza"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-blue-500 transition-transform transform hover:scale-125"
+          className="hover:text-blue-500 transition-transform transform hover:scale-150"
         >
           <FaGithub
-            size={28}
+            size={20}
             className={
               isDark
                 ? "text-white hover:text-blue-500"
@@ -66,10 +66,10 @@ export default function ActionBar() {
           href="https://www.linkedin.com/in/oussama-ezzahri/"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-blue-500 transition-transform transform hover:scale-125"
+          className="hover:text-blue-500 transition-transform transform hover:scale-150"
         >
           <FaLinkedin
-            size={28}
+            size={20}
             className={
               isDark
                 ? "text-white hover:text-blue-500"
@@ -81,10 +81,10 @@ export default function ActionBar() {
         {/* Email Link */}
         <a
           href="mailto:ezzahri.o021@ucd.ac.ma"
-          className="hover:text-blue-500 transition-transform transform hover:scale-125"
+          className="hover:text-blue-500 transition-transform transform hover:scale-150"
         >
           <FaEnvelope
-            size={28}
+            size={20}
             className={
               isDark
                 ? "text-white hover:text-blue-500"
@@ -93,7 +93,7 @@ export default function ActionBar() {
           />
         </a>
 
-        <div className="h-10 w-1 bg-gray-600 m-0 p-0"></div>
+        <div className="h-8 w-1 bg-gray-600 m-0 p-0"></div>
 
         {/* Dark Mode Toggle */}
         <IconButton
@@ -101,8 +101,8 @@ export default function ActionBar() {
           icon={isDark ? <SunIcon /> : <MoonIcon />}
           onClick={toggleColorMode}
           variant="ghost"
-          size="lg"
-          className="transition-transform transform hover:scale-125 hover:text-blue-500"
+          size="md"
+          className="transition-transform transform hover:scale-150 hover:text-blue-500"
           color={isDark ? "yellow.400" : "gray.800"}
         />
       </Flex>
