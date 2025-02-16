@@ -22,7 +22,7 @@ export default function NavBar() {
             href="/"
             className="flex items-center space-x-3 text-2xl transition-all transform hover:-translate-y-1 hover:text-blue-500 font-extrabold"
           >
-            <Avatar name="Oussama EZZAHRI" src="./My_Pic.png" />
+            <Avatar name="Oussama EZZAHRI" src="./O.png" />
             <span>Oussama EZZAHRI</span>
           </a>
 
