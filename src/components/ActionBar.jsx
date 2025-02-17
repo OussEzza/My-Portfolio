@@ -21,8 +21,8 @@ export default function ActionBar() {
         justify="center"
         align="center"
         gap={6}
-        bg={isDark ? "gray.800" : "white"}
-        shadow="xl"
+        bg={isDark ? "gray.900" : "white"}
+        shadow="2xl"
         p={4}
         rounded="full"
         className="transition-all duration-300"
