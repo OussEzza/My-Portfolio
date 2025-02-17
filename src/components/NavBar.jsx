@@ -20,10 +20,10 @@ export default function NavBar() {
           {/* Logo Section */}
           <a
             href="/"
-            className="flex items-center space-x-3 text-2xl transition-all transform hover:-translate-y-1 hover:text-blue-500 font-extrabold"
+            className="flex items-center space-x-3 text-2xl transition-all transform hover:text-blue-500 font-extrabold"
           >
             <Avatar name="Oussama EZZAHRI" src="./O.png" />
-            <span>Oussama EZZAHRI</span>
+            {/* <span>Oussama EZZAHRI</span> */}
           </a>
 
           {/* Desktop Links Section */}
