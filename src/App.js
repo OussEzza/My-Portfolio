@@ -44,7 +44,7 @@ function MainPage() {
         <ContactPage />
       </div>
       <ActionBar />
-      <footer className="py-8 bg-gray-800 text-white text-center">
+      <footer className="pt-4 pb-2 bg-gray-800 text-white text-center">
         <p>&copy; 2025 Oussama EZZAHRI. All Rights Reserved.</p>
       </footer>
     </>

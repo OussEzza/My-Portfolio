@@ -35,7 +35,7 @@ const experienceData = [
 const EducationPage = () => {
   return (
     <div className="flex flex-col items-center justify-center px-4 2xl:px-30 py-16">
-      <h1 className="text-5xl font-extrabold text-center mb-1">EDUCATION & EXPERIENCE</h1>
+      <h1 className="text-3xl md:text-5xl font-extrabold text-center mb-1">EDUCATION & EXPERIENCE</h1>
       <div className="w-20 h-2 bg-sky-500 mb-6"></div>
       <p className="text-lg md:text-xl w-1/2 text-center leading-relaxed">
         Below are my educational background and professional experiences.

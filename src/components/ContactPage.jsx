@@ -16,7 +16,7 @@ export default function ContactPage() {
 
   return (
     <div className="flex flex-col items-center justify-center px-4 sm:px-8 md:px-16 lg:px-32 xl:px-30 py-12 md:py-16">
-      <h1 className="text-4xl sm:text-5xl font-extrabold text-center mb-2">
+      <h1 className="text-3xl sm:text-5xl font-extrabold text-center mb-2">
         CONTACT ME
       </h1>
       <div className="w-16 sm:w-20 h-2 bg-sky-500 mb-6"></div>

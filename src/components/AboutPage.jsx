@@ -36,7 +36,7 @@ export default function AboutPage() {
 
   return (
     <div className="flex flex-col items-center justify-center 2xl:px-30 py-16">
-      <h1 className="text-5xl font-extrabold text-center mb-1">ABOUT ME</h1>
+      <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-1">ABOUT ME</h1>
       <div className="w-20 h-2 bg-sky-500 mb-6"></div>
       <p className="text-lg md:text-xl w-1/2 text-center leading-relaxed">
         Here you will find more information about me, what I do, and my current
@@ -46,7 +46,7 @@ export default function AboutPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:p-8 rounded-lg">
         {/* Left Column */}
         <div className="flex flex-col items-center p-4 md:p-8">
-          <h2 className="text-3xl font-bold text-center md:text-left mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-center md:text-left mb-4">
             Get to know me!
           </h2>
           <div className="justify-start items-center md:items-start py-8">
@@ -97,7 +97,7 @@ export default function AboutPage() {
         </div>
         {/* Right Column */}
         <div className="flex flex-col items-center justify-center p-4">
-          <h2 className="text-3xl font-bold text-center mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">
             Skills and Tools i use
           </h2>
           <SimpleGrid columns={{ base: 2, xl: 3, "2xl": 4 }} spacing={6}>
